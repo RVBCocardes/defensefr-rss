@@ -3,7 +3,7 @@ import time
 from datetime import datetime, timezone
 from email.utils import format_datetime
 from html import unescape
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -24,26 +24,29 @@ FEED_DESCRIPTION = (
     "Actualités du Ministère des Armées et des Anciens combattants"
 )
 
-MAX_ARTICLES = 30
+MAX_ARTICLES = 25
 
-# User-Agent réaliste
+# Nombre de liens d'articles à récupérer sur la page liste
+MAX_CANDIDATES = 40
+
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (X11; Linux x86_64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "AppleWebKit/537.36 "
+        "(KHTML, like Gecko) "
         "Chrome/131.0 Safari/537.36"
     ),
     "Accept": (
-        "text/html,application/xhtml+xml,application/xml;"
-        "q=0.9,image/avif,image/webp,*/*;q=0.8"
+        "text/html,application/xhtml+xml,"
+        "application/xml;q=0.9,image/avif,image/webp,"
+        "*/*;q=0.8"
     ),
     "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
-    "Connection": "keep-alive",
 }
 
 
 # ============================================================
-# SESSION HTTP ROBUSTE
+# SESSION HTTP
 # ============================================================
 
 def create_session():
@@ -62,37 +65,34 @@ def create_session():
 
     adapter = HTTPAdapter(
         max_retries=retry,
-        pool_connections=10,
-        pool_maxsize=10,
+        pool_connections=5,
+        pool_maxsize=5,
     )
 
     session.mount("https://", adapter)
     session.mount("http://", adapter)
-
     session.headers.update(HEADERS)
 
     return session
 
 
-# ============================================================
-# RÉCUPÉRATION DE LA PAGE
-# ============================================================
-
-def fetch_page(session, url, attempts=3):
+def fetch(session, url, attempts=3):
     """
-    Timeout séparé :
-      - 15 secondes pour établir la connexion
-      - 45 secondes pour recevoir les données
+    Téléchargement robuste.
 
-    Plusieurs tentatives avec délai progressif.
+    timeout:
+      - 15 secondes pour la connexion
+      - 45 secondes pour la lecture
+
+    Un échec sur un article ne fera pas échouer tout le flux.
     """
 
     for attempt in range(1, attempts + 1):
 
         try:
             print(
-                f"Téléchargement de {url} "
-                f"(tentative {attempt}/{attempts})..."
+                f"GET {url} "
+                f"(tentative {attempt}/{attempts})"
             )
 
             response = session.get(
@@ -103,30 +103,21 @@ def fetch_page(session, url, attempts=3):
 
             response.raise_for_status()
 
-            print(
-                f"Page récupérée : "
-                f"{len(response.content):,} octets"
-            )
-
             return response
 
         except requests.exceptions.RequestException as exc:
 
-            print(
-                f"Erreur lors de la récupération : {exc}"
-            )
+            print(f"  ERREUR : {exc}")
 
             if attempt < attempts:
-                delay = 3 * attempt
+                delay = attempt * 3
                 print(
-                    f"Nouvelle tentative dans {delay} secondes..."
+                    f"  Nouvelle tentative dans "
+                    f"{delay} secondes..."
                 )
                 time.sleep(delay)
 
-    raise RuntimeError(
-        f"Impossible de récupérer {url} "
-        f"après {attempts} tentatives."
-    )
+    return None
 
 
 # ============================================================
@@ -152,16 +143,32 @@ MONTHS = {
 }
 
 
-def parse_french_date(text):
-    """
-    Transforme :
-        04 septembre 2026
-    en datetime UTC.
+def clean_text(value):
+    if not value:
+        return ""
 
-    Si aucune date n'est trouvée, retourne None.
+    value = unescape(value)
+    value = re.sub(r"\s+", " ", value)
+
+    return value.strip()
+
+
+def absolute_url(value):
+    if not value:
+        return ""
+
+    return urljoin(BASE_URL, value.strip())
+
+
+def parse_french_date(value):
+    """
+    Exemples acceptés :
+
+      Publié le : 12 juin 2026
+      12 juin 2026
     """
 
-    if not text:
+    if not value:
         return None
 
     pattern = (
@@ -174,8 +181,8 @@ def parse_french_date(text):
 
     match = re.search(
         pattern,
-        text,
-        flags=re.IGNORECASE,
+        value,
+        re.IGNORECASE,
     )
 
     if not match:
@@ -199,301 +206,419 @@ def parse_french_date(text):
         return None
 
 
-def clean_text(text):
-    if not text:
-        return ""
+def parse_iso_date(value):
+    if not value:
+        return None
 
-    text = unescape(text)
-    text = re.sub(r"\s+", " ", text)
-    return text.strip()
+    value = value.strip()
 
-
-def absolute_url(url):
-    if not url:
-        return ""
-
-    return urljoin(BASE_URL, url.strip())
-
-
-def get_image_from_container(container):
-    """
-    Cherche l'image principale dans le bloc de l'article.
-    """
-
-    if not container:
-        return ""
-
-    # 1. Image classique
-    img = container.find("img")
-
-    if img:
-
-        # Priorité aux attributs pouvant contenir une vraie URL
-        for attribute in [
-            "src",
-            "data-src",
-            "data-lazy-src",
-            "data-original",
-        ]:
-            value = img.get(attribute)
-
-            if value and not value.startswith("data:"):
-                return absolute_url(value)
-
-        # 2. srcset
-        srcset = img.get("srcset")
-
-        if srcset:
-            candidates = [
-                item.strip().split(" ")[0]
-                for item in srcset.split(",")
-                if item.strip()
-            ]
-
-            if candidates:
-                return absolute_url(candidates[-1])
-
-    # 3. Image en background CSS
-    for element in container.find_all(style=True):
-
-        style = element.get("style", "")
-
-        match = re.search(
-            r"url\(['\"]?([^'\")]+)['\"]?\)",
-            style,
-            flags=re.IGNORECASE,
+    try:
+        # 2026-06-12T12:00:00+00:00
+        dt = datetime.fromisoformat(
+            value.replace("Z", "+00:00")
         )
 
-        if match:
-            return absolute_url(match.group(1))
+        if dt.tzinfo is None:
+            dt = dt.replace(
+                tzinfo=timezone.utc
+            )
+
+        return dt.astimezone(timezone.utc)
+
+    except ValueError:
+        return None
+
+
+# ============================================================
+# DÉTECTION DES VRAIS ARTICLES
+# ============================================================
+
+def extract_article_links(html):
+
+    soup = BeautifulSoup(
+        html,
+        "html.parser",
+    )
+
+    candidates = []
+    seen = set()
+
+    for link in soup.find_all(
+        "a",
+        href=True,
+    ):
+
+        href = absolute_url(
+            link.get("href")
+        )
+
+        parsed = urlparse(href)
+
+        # Domaine exact
+        if parsed.netloc.lower() != "www.defense.gouv.fr":
+            continue
+
+        path = parsed.path.rstrip("/")
+
+        # ----------------------------------------------------
+        # IMPORTANT :
+        #
+        # On veut les pages du type :
+        #
+        # /actualites/mon-article
+        #
+        # mais PAS :
+        #
+        # /actualites
+        # /actualites/une-rubrique
+        #
+        # ni :
+        #
+        # /terre/actualites/...
+        # /air/actualites/...
+        #
+        # puisque notre source est la rubrique générale.
+        # ----------------------------------------------------
+
+        if not path.startswith("/actualites/"):
+            continue
+
+        slug = path[len("/actualites/"):].strip("/")
+
+        if not slug:
+            continue
+
+        # Évite les URLs contenant une nouvelle sous-rubrique
+        if "/" in slug:
+            continue
+
+        # Exclusion de quelques chemins manifestement techniques
+        forbidden = [
+            "recherche",
+            "contact",
+            "mentions-legales",
+            "accessibilite",
+            "plan-du-site",
+        ]
+
+        if slug.lower() in forbidden:
+            continue
+
+        if href in seen:
+            continue
+
+        title = clean_text(
+            link.get_text(" ", strip=True)
+        )
+
+        if len(title) < 15:
+            continue
+
+        candidates.append(
+            {
+                "url": href,
+                "link_title": title,
+            }
+        )
+
+        seen.add(href)
+
+        if len(candidates) >= MAX_CANDIDATES:
+            break
+
+    print(
+        f"{len(candidates)} liens "
+        f"/actualites/... candidats trouvés."
+    )
+
+    return candidates
+
+
+# ============================================================
+# EXTRACTION D'UNE PAGE D'ARTICLE
+# ============================================================
+
+def get_meta(soup, *names):
+
+    for name in names:
+
+        # <meta property="og:title" ...>
+        tag = soup.find(
+            "meta",
+            attrs={
+                "property": name
+            },
+        )
+
+        if tag and tag.get("content"):
+            return clean_text(
+                tag.get("content")
+            )
+
+        # <meta name="description" ...>
+        tag = soup.find(
+            "meta",
+            attrs={
+                "name": name
+            },
+        )
+
+        if tag and tag.get("content"):
+            return clean_text(
+                tag.get("content")
+            )
 
     return ""
 
 
-def get_article_container(heading):
-    """
-    À partir du titre H2/H3, remonte dans le DOM
-    pour trouver le bloc correspondant à une actualité.
-    """
+def get_image(soup):
 
-    current = heading
+    # OpenGraph = priorité
+    image = get_meta(
+        soup,
+        "og:image",
+        "twitter:image",
+    )
 
-    for _ in range(6):
+    if image:
+        return absolute_url(image)
 
-        current = current.parent
+    # Fallback : première image avec src
+    for img in soup.find_all(
+        "img",
+        src=True,
+    ):
 
-        if current is None:
-            break
+        src = img.get("src", "")
 
-        text = clean_text(
-            current.get_text(" ", strip=True)
+        if src and not src.startswith("data:"):
+            return absolute_url(src)
+
+    return ""
+
+
+def extract_date(soup):
+
+    # 1. OpenGraph / métadonnées
+    for meta_name in [
+        "article:published_time",
+        "datePublished",
+        "date",
+    ]:
+
+        value = get_meta(
+            soup,
+            meta_name,
         )
 
-        # On cherche un bloc raisonnable contenant
-        # le titre + une date.
-        if len(text) > 50 and len(text) < 5000:
+        parsed = parse_iso_date(value)
 
-            if re.search(
-                r"\b\d{1,2}\s+"
-                r"(janvier|février|fevrier|mars|avril|mai|juin|"
-                r"juillet|août|aout|septembre|octobre|novembre|"
-                r"décembre|decembre)\s+\d{4}\b",
-                text,
-                flags=re.IGNORECASE,
-            ):
-                return current
+        if parsed:
+            return parsed
 
-    return heading.parent
+    # 2. Balise <time>
+    for time_tag in soup.find_all("time"):
 
-
-# ============================================================
-# EXTRACTION DES ARTICLES
-# ============================================================
-
-def extract_articles(html):
-
-    soup = BeautifulSoup(html, "html.parser")
-
-    articles = []
-    seen_urls = set()
-
-    # La page utilise actuellement des titres de niveau H2/H3
-    # pour les actualités.
-    headings = soup.find_all(["h2", "h3"])
-
-    print(f"{len(headings)} titres H2/H3 trouvés.")
-
-    for heading in headings:
-
-        title = clean_text(
-            heading.get_text(" ", strip=True)
-        )
-
-        if not title:
-            continue
-
-        # Ignore les titres trop courts qui correspondent
-        # probablement à la navigation.
-        if len(title) < 20:
-            continue
-
-        container = get_article_container(heading)
-
-        if not container:
-            continue
-
-        # ----------------------------------------------------
-        # URL
-        # ----------------------------------------------------
-
-        link = None
-
-        # D'abord, on cherche un lien dans le titre.
-        title_link = heading.find("a", href=True)
-
-        if title_link:
-            link = title_link.get("href")
-
-        # Sinon, recherche dans le bloc.
-        if not link:
-            block_link = container.find(
-                "a",
-                href=True,
+        value = (
+            time_tag.get("datetime")
+            or time_tag.get_text(
+                " ",
+                strip=True,
             )
-
-            if block_link:
-                link = block_link.get("href")
-
-        if not link:
-            continue
-
-        link = absolute_url(link)
-
-        # On ne conserve que les pages du site.
-        if not link.startswith(BASE_URL):
-            continue
-
-        # On exclut les liens génériques.
-        if link.rstrip("/") == SOURCE_URL.rstrip("/"):
-            continue
-
-        # Déduplication.
-        if link in seen_urls:
-            continue
-
-        # ----------------------------------------------------
-        # DATE
-        # ----------------------------------------------------
-
-        container_text = clean_text(
-            container.get_text(" ", strip=True)
         )
 
-        published = parse_french_date(
-            container_text
+        parsed = (
+            parse_iso_date(value)
+            or parse_french_date(value)
         )
 
-        if not published:
-            # Si aucune date n'est trouvée, ce n'est
-            # probablement pas une actualité.
-            continue
+        if parsed:
+            return parsed
 
-        # ----------------------------------------------------
-        # IMAGE
-        # ----------------------------------------------------
+    # 3. Recherche dans le texte
+    text = clean_text(
+        soup.get_text(
+            " ",
+            strip=True,
+        )
+    )
 
-        image_url = get_image_from_container(
-            container
+    return parse_french_date(text)
+
+
+def extract_title(soup, fallback):
+
+    # OpenGraph
+    title = get_meta(
+        soup,
+        "og:title",
+    )
+
+    if title:
+        return title
+
+    # H1
+    h1 = soup.find("h1")
+
+    if h1:
+        title = clean_text(
+            h1.get_text(
+                " ",
+                strip=True,
+            )
         )
 
-        # ----------------------------------------------------
-        # DESCRIPTION
-        # ----------------------------------------------------
+        if title:
+            return title
 
-        description = ""
+    return fallback
 
-        # On cherche les paragraphes du bloc.
-        paragraphs = container.find_all("p")
 
-        for paragraph in paragraphs:
+def extract_description(soup, title):
 
-            candidate = clean_text(
-                paragraph.get_text(
+    # --------------------------------------------------------
+    # OpenGraph description
+    # --------------------------------------------------------
+
+    description = get_meta(
+        soup,
+        "og:description",
+        "description",
+    )
+
+    if description:
+        return description[:2000]
+
+    # --------------------------------------------------------
+    # On cherche ensuite le premier paragraphe
+    # significatif après le H1.
+    # --------------------------------------------------------
+
+    h1 = soup.find("h1")
+
+    if h1:
+
+        # Regarde les éléments suivants
+        for element in h1.find_all_next(
+            ["p", "div"],
+            limit=30,
+        ):
+
+            text = clean_text(
+                element.get_text(
                     " ",
                     strip=True,
                 )
             )
 
+            if not text:
+                continue
+
+            if text == title:
+                continue
+
+            # Ignore les métadonnées
             if (
-                len(candidate) > 40
-                and candidate != title
+                "Publié le :" in text
+                or "Direction :" in text
             ):
-                description = candidate
-                break
+                continue
 
-        # Fallback : texte du bloc
-        if not description:
+            # Évite les textes minuscules de navigation
+            if len(text) < 50:
+                continue
 
-            text = container_text
+            return text[:2000]
 
-            # Retire le titre et la date.
-            description = text.replace(
-                title,
-                "",
-                1,
-            )
+    return ""
 
-            if published:
-                date_string = published.strftime(
-                    "%d/%m/%Y"
-                )
-                description = description.replace(
-                    date_string,
-                    "",
-                )
 
-            description = clean_text(
-                description
-            )
+def extract_article(
+    session,
+    candidate,
+):
 
-        # Limite raisonnable pour le RSS.
-        description = description[:1500]
+    url = candidate["url"]
 
-        articles.append(
-            {
-                "title": title,
-                "link": link,
-                "description": description,
-                "image": image_url,
-                "published": published,
-            }
-        )
-
-        seen_urls.add(link)
-
-        print(
-            f"ARTICLE : {title}"
-        )
-
-        print(
-            f"  date   : {published.date()}"
-        )
-
-        print(
-            f"  image  : {image_url or 'AUCUNE'}"
-        )
-
-        # On récupère suffisamment d'articles.
-        if len(articles) >= MAX_ARTICLES:
-            break
-
-    # Tri chronologique décroissant.
-    articles.sort(
-        key=lambda article: article["published"],
-        reverse=True,
+    response = fetch(
+        session,
+        url,
+        attempts=2,
     )
 
-    return articles[:MAX_ARTICLES]
+    if response is None:
+        print(
+            "  -> article ignoré"
+        )
+        return None
+
+    soup = BeautifulSoup(
+        response.text,
+        "html.parser",
+    )
+
+    title = extract_title(
+        soup,
+        candidate["link_title"],
+    )
+
+    published = extract_date(
+        soup
+    )
+
+    description = extract_description(
+        soup,
+        title,
+    )
+
+    image = get_image(
+        soup
+    )
+
+    # --------------------------------------------------------
+    # Validation
+    # --------------------------------------------------------
+
+    if not title:
+        print(
+            "  -> titre absent : ignoré"
+        )
+        return None
+
+    if not published:
+        print(
+            f"  -> date absente : {title}"
+        )
+        return None
+
+    print(
+        f"  ARTICLE : {title}"
+    )
+
+    print(
+        f"    date : {published.strftime('%d/%m/%Y')}"
+    )
+
+    print(
+        f"    image : "
+        f"{image if image else 'AUCUNE'}"
+    )
+
+    print(
+        f"    description : "
+        f"{description[:120]}..."
+        if description
+        else
+        "    description : AUCUNE"
+    )
+
+    return {
+        "title": title,
+        "link": url,
+        "description": description,
+        "image": image,
+        "published": published,
+    }
 
 
 # ============================================================
@@ -502,57 +627,52 @@ def extract_articles(html):
 
 def xml_escape(value):
     return escape(
-        str(value or ""),
-        {
-            '"': "&quot;",
-            "'": "&apos;",
-        },
+        str(value or "")
     )
 
 
 def build_description(article):
-    """
-    Description HTML destinée notamment à Inoreader.
 
-    L'image est placée directement dans la description.
-    """
-
-    description = clean_text(
-        article["description"]
-    )
+    parts = []
 
     image = article["image"]
 
-    html = ""
-
     if image:
-        html += (
-            '<p>'
+
+        parts.append(
+            "<p>"
             f'<img src="{xml_escape(image)}" '
             'alt="" '
             'style="max-width:100%;height:auto;" />'
-            '</p>'
+            "</p>"
         )
+
+    description = article["description"]
 
     if description:
-        html += (
-            f"<p>{xml_escape(description)}</p>"
+
+        parts.append(
+            "<p>"
+            f"{xml_escape(description)}"
+            "</p>"
         )
 
-    html += (
-        '<p>'
+    parts.append(
+        "<p>"
         f'<a href="{xml_escape(article["link"])}">'
         "Lire l'article complet sur defense.gouv.fr"
         "</a>"
         "</p>"
     )
 
-    return html
+    return "\n".join(parts)
 
 
 def build_rss(articles):
 
-    now = datetime.now(timezone.utc)
+    now = datetime.now(
+        timezone.utc
+    )
 
     items = []
 
@@ -566,42 +686,38 @@ def build_rss(articles):
             article["link"]
         )
 
+        guid = xml_escape(
+            article["link"]
+        )
+
+        pub_date = format_datetime(
+            article["published"]
+        )
+
         description = build_description(
             article
         )
 
-        published = article["published"]
-
-        pub_date = format_datetime(
-            published
-        )
-
-        # Image éventuelle
         enclosure = ""
 
         if article["image"]:
 
+            # On ne prétend pas connaître
+            # exactement le type MIME.
+            # image/jpeg fonctionne avec la
+            # majorité des images du site.
             enclosure = (
-                f'<enclosure '
+                "<enclosure "
                 f'url="{xml_escape(article["image"])}" '
-                f'type="image/jpeg" />'
+                'type="image/jpeg" />'
             )
-
-        # GUID = URL de l'article.
-        # Il reste stable entre deux exécutions.
-        guid = xml_escape(
-            article["link"]
-        )
 
         items.append(
             f"""
     <item>
       <title>{title}</title>
-
       <link>{link}</link>
-
       <guid isPermaLink="true">{guid}</guid>
-
       <pubDate>{pub_date}</pubDate>
 
       <description><![CDATA[
@@ -613,13 +729,11 @@ def build_rss(articles):
 """
         )
 
-    last_build = format_datetime(now)
-
     rss = f"""<?xml version="1.0" encoding="UTF-8"?>
 
 <rss version="2.0"
-     xmlns:content="http://purl.org/rss/1.0/modules/content/"
-     xmlns:media="http://search.yahoo.com/mrss/">
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
   <channel>
 
@@ -633,7 +747,7 @@ def build_rss(articles):
 
     <ttl>60</ttl>
 
-    <lastBuildDate>{last_build}</lastBuildDate>
+    <lastBuildDate>{format_datetime(now)}</lastBuildDate>
 
     {''.join(items)}
 
@@ -651,47 +765,112 @@ def build_rss(articles):
 
 def main():
 
-    print("==========================================")
-    print(" Génération du flux RSS Defense.fr")
-    print("==========================================")
+    print()
+    print("=" * 60)
+    print(" MINISTÈRE DES ARMÉES - GÉNÉRATION RSS")
+    print("=" * 60)
+    print()
 
     session = create_session()
 
-    try:
+    # --------------------------------------------------------
+    # 1. Page des actualités
+    # --------------------------------------------------------
 
-        response = fetch_page(
-            session,
-            SOURCE_URL,
+    response = fetch(
+        session,
+        SOURCE_URL,
+        attempts=3,
+    )
+
+    if response is None:
+
+        raise RuntimeError(
+            "Impossible de récupérer la page "
+            "des actualités après plusieurs tentatives."
         )
 
-    except Exception as exc:
+    # --------------------------------------------------------
+    # 2. Recherche des vrais liens /actualites/slug
+    # --------------------------------------------------------
 
-        print(
-            f"ERREUR FATALE : {exc}"
-        )
-
-        raise
-
-    articles = extract_articles(
+    candidates = extract_article_links(
         response.text
     )
 
-    if not articles:
+    if len(candidates) < 5:
 
         raise RuntimeError(
-            "Aucun article détecté. "
-            "Le format de la page a peut-être changé."
+            "Trop peu de vrais articles détectés "
+            f"({len(candidates)}). "
+            "Le flux précédent n'est PAS remplacé."
         )
+
+    # --------------------------------------------------------
+    # 3. Ouverture des articles
+    # --------------------------------------------------------
+
+    articles = []
+
+    for candidate in candidates:
+
+        article = extract_article(
+            session,
+            candidate,
+        )
+
+        if article:
+
+            articles.append(
+                article
+            )
+
+        # On s'arrête dès qu'on a assez
+        # d'articles valides.
+        if len(articles) >= MAX_ARTICLES:
+            break
+
+        # Petite pause pour ne pas marteler
+        # le serveur.
+        time.sleep(0.5)
+
+    # --------------------------------------------------------
+    # 4. Validation finale
+    # --------------------------------------------------------
+
+    if len(articles) < 5:
+
+        raise RuntimeError(
+            "Moins de 5 articles valides "
+            f"ont été récupérés ({len(articles)}). "
+            "Le flux précédent n'est PAS remplacé."
+        )
+
+    # Tri du plus récent au plus ancien
+    articles.sort(
+        key=lambda item: item["published"],
+        reverse=True,
+    )
+
+    articles = articles[
+        :MAX_ARTICLES
+    ]
 
     print()
     print(
-        f"{len(articles)} articles détectés."
+        f"{len(articles)} articles valides."
     )
+
+    # --------------------------------------------------------
+    # 5. Génération du RSS
+    # --------------------------------------------------------
 
     rss = build_rss(
         articles
     )
 
+    # IMPORTANT :
+    # feed.xml n'est écrit qu'après validation.
     with open(
         "feed.xml",
         "w",
@@ -704,6 +883,9 @@ def main():
     print(
         "feed.xml généré avec succès."
     )
+
+    print()
+    print("=" * 60)
 
 
 if __name__ == "__main__":
