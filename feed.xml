@@ -1,251 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
   <channel>
+
     <title>Ministère des Armées - Actualités</title>
+
     <link>https://www.defense.gouv.fr/actualites</link>
+
     <description>Actualités du Ministère des Armées et des Anciens combattants</description>
+
     <language>fr-fr</language>
-    <lastBuildDate>Sat, 05 Sep 2026 17:51:03 +0000</lastBuildDate>
-    
-    <item>
-      <title>La ministre des Armées et des Anciens combattants</title>
-      <link>https://www.defense.gouv.fr/ministere/catherine-vautrin-ministre-armees-anciens-combattants</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/ministere/catherine-vautrin-ministre-armees-anciens-combattants</guid>
-      <description>La ministre des Armées et des Anciens combattants</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>La ministre déléguée auprès de la ministre des Armées et des Anciens combattants</title>
-      <link>https://www.defense.gouv.fr/ministere/alice-rufo-ministre-deleguee-aupres-ministre-armees-anciens-combattants</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/ministere/alice-rufo-ministre-deleguee-aupres-ministre-armees-anciens-combattants</guid>
-      <description>La ministre déléguée auprès de la ministre des Armées et des Anciens combattants</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Politique de défense</title>
-      <link>https://www.defense.gouv.fr/ministere/politique-defense</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/ministere/politique-defense</guid>
-      <description>Politique de défense</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Budget et finances</title>
-      <link>https://www.defense.gouv.fr/sga/budget-finances</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/sga/budget-finances</guid>
-      <description>Budget et finances</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Les opérations militaires</title>
-      <link>https://www.defense.gouv.fr/operations</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/operations</guid>
-      <description>Les opérations militaires</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Le service national</title>
-      <link>https://www.defense.gouv.fr/nous-rejoindre/service-national</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/nous-rejoindre/service-national</guid>
-      <description>Le service national</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Recrutement et stages</title>
-      <link>https://www.defense.gouv.fr/nous-rejoindre/recrutement-stages</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/nous-rejoindre/recrutement-stages</guid>
-      <description>Recrutement et stages</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Écoles et formations</title>
-      <link>https://www.defense.gouv.fr/nous-rejoindre/ecoles-formations</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/nous-rejoindre/ecoles-formations</guid>
-      <description>Écoles et formations</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Équipements et maintenance</title>
-      <link>https://www.defense.gouv.fr/nos-expertises/equipements-maintenance</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/nos-expertises/equipements-maintenance</guid>
-      <description>Équipements et maintenance</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Infrastructure et immobilier</title>
-      <link>https://www.defense.gouv.fr/sga/au-service-armees/infrastructure-immobilier</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/sga/au-service-armees/infrastructure-immobilier</guid>
-      <description>Infrastructure et immobilier</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Innovation et technologie</title>
-      <link>https://www.defense.gouv.fr/nos-expertises/innovation-technologie</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/nos-expertises/innovation-technologie</guid>
-      <description>Innovation et technologie</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Sécurité nucléaire</title>
-      <link>https://www.defense.gouv.fr/nos-expertises/securite-nucleaire</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/nos-expertises/securite-nucleaire</guid>
-      <description>Sécurité nucléaire</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Acteur des territoires</title>
-      <link>https://www.defense.gouv.fr/sga/au-service-nation-du-public/acteur-territoires</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/sga/au-service-nation-du-public/acteur-territoires</guid>
-      <description>Acteur des territoires</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Développement durable</title>
-      <link>https://www.defense.gouv.fr/sga/au-service-nation-du-public/developpement-durable</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/sga/au-service-nation-du-public/developpement-durable</guid>
-      <description>Développement durable</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Droit et défense</title>
-      <link>https://www.defense.gouv.fr/sga/au-service-armees/droit-defense</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/sga/au-service-armees/droit-defense</guid>
-      <description>Droit et défense</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Égalité et diversité</title>
-      <link>https://www.defense.gouv.fr/nos-enjeux/egalite-diversite</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/nos-enjeux/egalite-diversite</guid>
-      <description>Égalité et diversité</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Mémoire, culture et patrimoine</title>
-      <link>https://www.defense.gouv.fr/sga/memoire-culture-archives</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/sga/memoire-culture-archives</guid>
-      <description>Mémoire, culture et patrimoine</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Modernisation et transformation</title>
-      <link>https://www.defense.gouv.fr/sga/nous-connaitre/organisation-du-sga/directions/delegation-transformation-performance-ministerielles</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/sga/nous-connaitre/organisation-du-sga/directions/delegation-transformation-performance-ministerielles</guid>
-      <description>Modernisation et transformation</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Politique ministérielle PME</title>
-      <link>https://www.defense.gouv.fr/nos-enjeux/dispositifs-specifiques-aux-pme-eti-du-ministere-armees</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/nos-enjeux/dispositifs-specifiques-aux-pme-eti-du-ministere-armees</guid>
-      <description>Politique ministérielle PME</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Relations internationales</title>
-      <link>https://www.defense.gouv.fr/nos-enjeux/relations-internationales-au-ministere</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/nos-enjeux/relations-internationales-au-ministere</guid>
-      <description>Relations internationales</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Salle de presse</title>
-      <link>https://www.defense.gouv.fr/salle-de-presse</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/salle-de-presse</guid>
-      <description>Salle de presse</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Démarches en ligne</title>
-      <link>https://www.defense.gouv.fr/aides-demarches/demarches-ligne</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/aides-demarches/demarches-ligne</guid>
-      <description>Démarches en ligne</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Au service des agents du ministère</title>
-      <link>https://www.defense.gouv.fr/sga/au-service-des-agents</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/sga/au-service-des-agents</guid>
-      <description>Au service des agents du ministère</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Guide du correspondant défense</title>
-      <link>https://www.defense.gouv.fr/aides-demarches/guide-pratique-du-correspondant-defense</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/aides-demarches/guide-pratique-du-correspondant-defense</guid>
-      <description>Guide du correspondant défense</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Guide contre la désinformation</title>
-      <link>https://www.defense.gouv.fr/aides-demarches/guide-contre-desinformation</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/aides-demarches/guide-contre-desinformation</guid>
-      <description>Guide contre la désinformation</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
-    
-    <item>
-      <title>Guide des médias sociaux</title>
-      <link>https://www.defense.gouv.fr/aides-demarches/guide-du-bon-usage-medias-sociaux</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/aides-demarches/guide-du-bon-usage-medias-sociaux</guid>
-      <description>Guide des médias sociaux</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
-    </item>
+
+    <ttl>60</ttl>
+
+    <lastBuildDate>Sat, 05 Sep 2026 18:28:22 +0000</lastBuildDate>
+
     
     <item>
       <title>Espace : les armées s’adaptent à un milieu de plus en plus contesté</title>
       <link>https://www.defense.gouv.fr/actualites/espace-armees-sadaptent-milieu-plus-plus-conteste</link>
       <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/espace-armees-sadaptent-milieu-plus-plus-conteste</guid>
-      <description>Espace : les armées s’adaptent à un milieu de plus en plus contesté Indispensable à la conduite des opérations militaires, l’espace est désormais un milieu de plus en plus con... 04 septembre 2026</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
+      <pubDate>Fri, 04 Sep 2026 08:45:57 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Satellite%20CSO.jpg?itok=uQa4IimW" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Indispensable à la conduite des opérations militaires, l’espace est désormais un milieu de plus en plus contesté. Multiplication des acteurs, nouvelles menaces, accélération technologique : pour préserver leur liberté d’action, les armées doivent renforcer leurs capacités opérationnelles, leurs coopérations et leur capacité d’innovation. Trois enjeux présentés lors du point presse du jeudi 3 septembre.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/espace-armees-sadaptent-milieu-plus-plus-conteste">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Satellite%20CSO.jpg?itok=uQa4IimW" type="image/jpeg" />
     </item>
-    
+
     <item>
       <title>Armée de Terre : 18 pôles exploratoires pour réinventer le combat du futur</title>
       <link>https://www.defense.gouv.fr/actualites/armee-terre-18-poles-exploratoires-reinventer-combat-du-futur</link>
       <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/armee-terre-18-poles-exploratoires-reinventer-combat-du-futur</guid>
-      <description>Armée de Terre : 18 pôles exploratoires pour réinventer le combat du futur Depuis juillet 2025, 18 pôles exploratoires de l’armée de Terre ont vu le jour en France. Coordonnés par le... 03 septembre 2026</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
+      <pubDate>Thu, 03 Sep 2026 14:49:48 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2026_TNIM_023_A_001_003.jpg?itok=W9rflSi9" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Depuis juillet 2025, 18 pôles exploratoires de l’armée de Terre ont vu le jour en France. Coordonnés par le laboratoire du combat futur, leur mission est claire : penser l'armée de demain et expérimenter localement des tactiques et matériels pour s'adapter aux événements. Explications.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/armee-terre-18-poles-exploratoires-reinventer-combat-du-futur">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2026_TNIM_023_A_001_003.jpg?itok=W9rflSi9" type="image/jpeg" />
     </item>
-    
+
     <item>
       <title>[Service national] Témoignage d’une télépilote drone : missions, formation et vie quotidienne</title>
       <link>https://www.defense.gouv.fr/actualites/service-national-temoignage-dune-telepilote-drone-missions-formation-vie-quotidienne</link>
       <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/service-national-temoignage-dune-telepilote-drone-missions-formation-vie-quotidienne</guid>
-      <description>[Service national] Témoignage d’une télépilote drone : missions, formation et vie quotidienne Laurence, 21 ans, est engagée depuis 3 ans et demi au 61e régiment d’artillerie en tant que télépilote dron... 02 septembre 2026</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
+      <pubDate>Wed, 02 Sep 2026 08:58:17 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Portrait%20droniste.jpg?itok=amVUOV3d" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Laurence, 21 ans, est engagée depuis 3 ans et demi au 61e régiment d’artillerie en tant que télépilote drone. Elle est formée sur le modèle de drone NX 70. Son rôle consiste à utiliser les drones pour collecter du renseignement en prenant des images et photos aériennes. Portrait.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/service-national-temoignage-dune-telepilote-drone-missions-formation-vie-quotidienne">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Portrait%20droniste.jpg?itok=amVUOV3d" type="image/jpeg" />
     </item>
-    
+
     <item>
       <title>La Suède achète quatre frégates de défense et d’intervention</title>
       <link>https://www.defense.gouv.fr/actualites/suede-achete-quatre-fregates-defense-dintervention</link>
       <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/suede-achete-quatre-fregates-defense-dintervention</guid>
-      <description>La Suède achète quatre frégates de défense et d’intervention En visite en Suède le 31 août, Emmanuel Macron a participé, aux côtés du Premier ministre suédois Ulf Kristersson, à la cérémonie de signature du contrat portant sur l’acquisition de quatre frégates de défense et d’intervention (FDI). D’un montant de 4,3 milliards d’euros, cet investissement majeur permettra à la marine suédoise de tripler ses capacités actuelles de défense aérienne. 01 septembre 2026</description>
-      <pubDate>Sat, 05 Sep 2026 17:51:03 +0000</pubDate>
+      <pubDate>Tue, 01 Sep 2026 08:35:56 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/FDI.jpg?itok=F7JbeUdu" alt="" style="max-width:100%;height:auto;" /></p>
+<p>En visite en Suède le 31 août, Emmanuel Macron a participé, aux côtés du Premier ministre suédois Ulf Kristersson, à la cérémonie de signature du contrat portant sur l’acquisition de quatre frégates de défense et d’intervention (FDI). D’un montant de 4,3 milliards d’euros, cet investissement majeur permettra à la marine suédoise de tripler ses capacités actuelles de défense aérienne.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/suede-achete-quatre-fregates-defense-dintervention">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/FDI.jpg?itok=F7JbeUdu" type="image/jpeg" />
     </item>
-    
+
+    <item>
+      <title>[VU] C’est la rentrée des classes !</title>
+      <link>https://www.defense.gouv.fr/actualites/cest-rentree-classes</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/cest-rentree-classes</guid>
+      <pubDate>Tue, 01 Sep 2026 06:00:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Ecole%20des%20mousses%20-%2014072025%20-%201.jpg?itok=FUiMhNRw" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Ce matin, certains vont découvrir leur nouveau lycée et d’autres la vie de marins. A Brest, à l’École des mousses, des jeunes dès 16 ans vont rejoindre la Marine nationale pour suivre une formation de 10 mois.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/cest-rentree-classes">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Ecole%20des%20mousses%20-%2014072025%20-%201.jpg?itok=FUiMhNRw" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>Pégase 26, déploiement stratégique de l’armée de l’Air et de l’Espace</title>
+      <link>https://www.defense.gouv.fr/actualites/pegase-26-deploiement-strategique-larmee-lair-lespace</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/pegase-26-deploiement-strategique-larmee-lair-lespace</guid>
+      <pubDate>Thu, 27 Aug 2026 13:55:29 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2022_A330_033_R_004_048.jpg?itok=dtZM-fzq" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Assurer une présence militaire décisive et, ce, sur un arc stratégique étendu –de l’Arctique au Proche-Moyen-Orient, en passant par l’Indopacifique : c’est bien ce qu’incarne la mission Pégase 2026. Par cette septième édition, l’armée de l’Air et de l’Espace illustre, une fois de plus, son aptitude à se projeter dans des environnements variés et exigeants.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/pegase-26-deploiement-strategique-larmee-lair-lespace">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2022_A330_033_R_004_048.jpg?itok=dtZM-fzq" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>[Service national] Présentation d’un grenadier voltigeur : missions, entraînements et motivations</title>
+      <link>https://www.defense.gouv.fr/actualites/service-national-presentation-dun-grenadier-voltigeur-missions-entrainements-motivations</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/service-national-presentation-dun-grenadier-voltigeur-missions-entrainements-motivations</guid>
+      <pubDate>Wed, 26 Aug 2026 09:43:48 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Portrait%20de%20grenadier%20voltigeur.jpg?itok=fuZGF-fw" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Enzo, 19 ans, première classe au premier régiment d’infanterie, s’est engagé à 17 ans et demi. Il exerce depuis deux ans en tant que grenadier voltigeur, membre d’une équipe de sept soldats composée de quatre grenadiers voltigeurs, deux chefs d’équipe et un chef de groupe. Leur déploiement se fait à bord d’un Griffon, véhicule permettant l’embarquement et le débarquement rapides, pour des interventions en première ligne sur le terrain. Portrait.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/service-national-presentation-dun-grenadier-voltigeur-missions-entrainements-motivations">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Portrait%20de%20grenadier%20voltigeur.jpg?itok=fuZGF-fw" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>25 août 1944 : Paris libéré</title>
+      <link>https://www.defense.gouv.fr/actualites/25-aout-1944-paris-libere</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/25-aout-1944-paris-libere</guid>
+      <pubDate>Tue, 25 Aug 2026 07:00:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/ED12%20barricades%20Paris.jpg?h=c153702c&amp;itok=AmBpPb2L" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Il y a 82 ans, le joug de l’occupant cédait à Paris. La Résistance et la 2e division blindée menée par le général Leclerc, accompagnée de la 4e division d’infanterie américaine, font reculer les nazis de la capitale. Après quatre années d’occupation, Paris retrouve sa liberté.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/25-aout-1944-paris-libere">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/ED12%20barricades%20Paris.jpg?h=c153702c&amp;itok=AmBpPb2L" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>[Defcast] De la soute d’un Transall au parquet de Paris</title>
+      <link>https://www.defense.gouv.fr/actualites/defcast-soute-dun-transall-au-parquet-paris</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/defcast-soute-dun-transall-au-parquet-paris</guid>
+      <pubDate>Mon, 24 Aug 2026 07:00:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/breve_DEFCAST-aout-2026.jpg?h=bb322004&amp;itok=TXRcm1qQ" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Le métier de greffier militaire, elle ne le connaissait pas, il y a encore quelques années. Aujourd’hui, l’adjudant-chef Alexia, l’endosse avec fierté. Cette sous-officier a construit sa carrière au fil des rencontres et des opportunités. Elle a tout d’abord œuvré pendant sept ans, en tant que traductrice en langue arabe à bord du mythique Transall Gabriel. Une vie au cœur de l’action qu’elle a quittée pour rejoindre la justice militaire. C’est ce pari fou qu’elle nous raconte.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/defcast-soute-dun-transall-au-parquet-paris">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/breve_DEFCAST-aout-2026.jpg?h=bb322004&amp;itok=TXRcm1qQ" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>[Service national] Présentation du métier de pistard : opérateur de maintenance aéronautique</title>
+      <link>https://www.defense.gouv.fr/actualites/service-national-presentation-du-metier-pistard-operateur-maintenance-aeronautique</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/service-national-presentation-du-metier-pistard-operateur-maintenance-aeronautique</guid>
+      <pubDate>Thu, 20 Aug 2026 06:30:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Pistard%20MArine.jpg?itok=IElNt7XC" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Le quartier-maître de 1ère classe Paul est pistard au sein de la flotille 35F. Son métier, proposé au service national, consiste à réaliser des opérations de maintenance de premier niveau sur aéronef. Les contrôles et actions effectués garantissent la sécurité des vols. Portrait.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/service-national-presentation-du-metier-pistard-operateur-maintenance-aeronautique">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Pistard%20MArine.jpg?itok=IElNt7XC" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>Les premiers pas d’une marine d’État</title>
+      <link>https://www.defense.gouv.fr/actualites/premiers-pas-dune-marine-detat</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/premiers-pas-dune-marine-detat</guid>
+      <pubDate>Wed, 19 Aug 2026 09:46:31 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/M%C3%A9moire%20vive%20photo%201%20ED20.jpg?itok=seWCYpPa" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Depuis 400 ans, la Marine nationale protège les Français, sur tous les océans. Ce sont quatre siècles d’engagement en mer, d’hommes et de femmes au service de la France, des Français et de leurs intérêts. La Marine demeure un pilier de la défense de notre pays et de sa souveraineté. En 1626, le cardinal de Richelieu réussit un projet d’envergure : doter la France d’une marine d'État à même de contrôler des accès stratégiques à la mer et de renforcer l’autorité du roi de France Louis XIII.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/premiers-pas-dune-marine-detat">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/M%C3%A9moire%20vive%20photo%201%20ED20.jpg?itok=seWCYpPa" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>Actualisation de la LPM : la France intensifie son effort de réarmement</title>
+      <link>https://www.defense.gouv.fr/actualites/actualisation-lpm-france-intensifie-son-effort-rearmement</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/actualisation-lpm-france-intensifie-son-effort-rearmement</guid>
+      <pubDate>Tue, 18 Aug 2026 13:03:38 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/SAMPT-NG.jpg?itok=-4jP_mMa" alt="" style="max-width:100%;height:auto;" /></p>
+<p>La loi actualisant la programmation militaire 2024-2030 prévoit 36 milliards d’euros supplémentaires pour les armées françaises d’ici 2030. Après le feu vert du Conseil constitutionnel le 6 août, sa promulgation le 16 août doit permettre d’accélérer le réarmement français et de renforcer les capacités critiques des forces. Explications.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/actualisation-lpm-france-intensifie-son-effort-rearmement">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/SAMPT-NG.jpg?itok=-4jP_mMa" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>[Décryptage] Les enjeux de la France en Indopacifique</title>
+      <link>https://www.defense.gouv.fr/actualites/decryptage-enjeux-france-indopacifique</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/decryptage-enjeux-france-indopacifique</guid>
+      <pubDate>Tue, 18 Aug 2026 07:00:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Sous-marin%20nucl%C3%A9aire%20d%27attaque%20Emeraude%20-%20Cr%C3%A9dit%20Pierre-Luc%20Hamelin%20Marine%20Nationale%20D%C3%A9fense.jpg?itok=IwpZUNx5" alt="" style="max-width:100%;height:auto;" /></p>
+<p>La région Indopacifique - comprise entre Djibouti et la Polynésie – est l’un des espaces les plus dynamiques de la planète mais aussi l’un des plus instables. Traversé par les rivalités entre les grandes puissances, il doit aussi faire face à des défis climatiques et environnementaux majeurs.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/decryptage-enjeux-france-indopacifique">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Sous-marin%20nucl%C3%A9aire%20d%27attaque%20Emeraude%20-%20Cr%C3%A9dit%20Pierre-Luc%20Hamelin%20Marine%20Nationale%20D%C3%A9fense.jpg?itok=IwpZUNx5" type="image/jpeg" />
+    </item>
+
+
   </channel>
+
 </rss>
