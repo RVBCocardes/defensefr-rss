@@ -22,10 +22,10 @@ jobs:
 
     steps:
       - name: Récupérer les fichiers
-        uses: actions/checkout@v6
+        uses: actions/checkout@v5
 
       - name: Configurer GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Publier le flux RSS
         uses: actions/upload-pages-artifact@v4
