@@ -16,24 +16,9 @@
 
     <ttl>60</ttl>
 
-    <lastBuildDate>Sat, 12 Sep 2026 06:32:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 07:25:38 +0000</lastBuildDate>
 
     
-    <item>
-      <title>Première édition du Forum Européen du Spatial de Défense</title>
-      <link>https://www.defense.gouv.fr/actualites/premiere-edition-du-forum-europeen-du-spatial-defense</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/premiere-edition-du-forum-europeen-du-spatial-defense</guid>
-      <pubDate>Fri, 11 Sep 2026 11:21:11 +0000</pubDate>
-
-      <description><![CDATA[
-<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/MinarmFESD.jpg?itok=q9qtvuj7" alt="" style="max-width:100%;height:auto;" /></p>
-<p>Dans le cadre du Sommet international sur l’espace, le premier Forum Européen du Spatial de Défense (FESD) s’est déroulé aux Invalides les 8 et 9 septembre. Ce forum inédit a rassemblé 30 nations européennes volontaires. Le but : créer une rencontre pérenne des acteurs défense sur le spatial. Une deuxième édition est d’ores et déjà prévue pour 2027.</p>
-<p><a href="https://www.defense.gouv.fr/actualites/premiere-edition-du-forum-europeen-du-spatial-defense">Lire l'article complet sur defense.gouv.fr</a></p>
-      ]]></description>
-
-      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/MinarmFESD.jpg?itok=q9qtvuj7" type="image/jpeg" />
-    </item>
-
     <item>
       <title>L’Europe spatiale appelée à changer d’échelle</title>
       <link>https://www.defense.gouv.fr/actualites/leurope-spatiale-appelee-changer-dechelle</link>
@@ -47,6 +32,21 @@
       ]]></description>
 
       <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/president.jpg?itok=VD2aSNFE" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>Première édition du Forum Européen du Spatial de Défense</title>
+      <link>https://www.defense.gouv.fr/actualites/premiere-edition-du-forum-europeen-du-spatial-defense</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/premiere-edition-du-forum-europeen-du-spatial-defense</guid>
+      <pubDate>Fri, 11 Sep 2026 06:14:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/MinarmFESD.jpg?itok=q9qtvuj7" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Dans le cadre du Sommet international sur l’espace, le premier Forum Européen du Spatial de Défense (FESD) s’est déroulé aux Invalides les 8 et 9 septembre. Ce forum inédit a rassemblé 30 nations européennes volontaires. Le but : créer une rencontre pérenne des acteurs défense sur le spatial. Une deuxième édition est d’ores et déjà prévue pour 2027.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/premiere-edition-du-forum-europeen-du-spatial-defense">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/MinarmFESD.jpg?itok=q9qtvuj7" type="image/jpeg" />
     </item>
 
     <item>
