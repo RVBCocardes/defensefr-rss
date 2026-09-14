@@ -16,9 +16,24 @@
 
     <ttl>60</ttl>
 
-    <lastBuildDate>Mon, 14 Sep 2026 12:36:01 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 13:32:10 +0000</lastBuildDate>
 
     
+    <item>
+      <title>[JDEF] A400M, combattre et sauver</title>
+      <link>https://www.defense.gouv.fr/actualites/jdef-a400m-combattre-sauver</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/jdef-a400m-combattre-sauver</guid>
+      <pubDate>Mon, 14 Sep 2026 13:07:10 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/A400M.jpg?itok=eAAI-kl7" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Symbole des capacités de projection et d’autonomie des forces aériennes françaises, l’A400M Atlas a su conquérir le cœur du grand public comme celui des experts. Héros discret des conflits modernes comme des catastrophes naturelles, il s’est imposé au fil des ans comme un outil indispensable.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/jdef-a400m-combattre-sauver">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/A400M.jpg?itok=eAAI-kl7" type="image/jpeg" />
+    </item>
+
     <item>
       <title>L’Europe spatiale appelée à changer d’échelle</title>
       <link>https://www.defense.gouv.fr/actualites/leurope-spatiale-appelee-changer-dechelle</link>
@@ -197,21 +212,6 @@
       ]]></description>
 
       <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2022_A330_033_R_004_048.jpg?itok=dtZM-fzq" type="image/jpeg" />
-    </item>
-
-    <item>
-      <title>[Service national] Présentation d’un grenadier voltigeur : missions, entraînements et motivations</title>
-      <link>https://www.defense.gouv.fr/actualites/service-national-presentation-dun-grenadier-voltigeur-missions-entrainements-motivations</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/service-national-presentation-dun-grenadier-voltigeur-missions-entrainements-motivations</guid>
-      <pubDate>Wed, 26 Aug 2026 09:43:48 +0000</pubDate>
-
-      <description><![CDATA[
-<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Portrait%20de%20grenadier%20voltigeur.jpg?itok=fuZGF-fw" alt="" style="max-width:100%;height:auto;" /></p>
-<p>Enzo, 19 ans, première classe au premier régiment d’infanterie, s’est engagé à 17 ans et demi. Il exerce depuis deux ans en tant que grenadier voltigeur, membre d’une équipe de sept soldats composée de quatre grenadiers voltigeurs, deux chefs d’équipe et un chef de groupe. Leur déploiement se fait à bord d’un Griffon, véhicule permettant l’embarquement et le débarquement rapides, pour des interventions en première ligne sur le terrain. Portrait.</p>
-<p><a href="https://www.defense.gouv.fr/actualites/service-national-presentation-dun-grenadier-voltigeur-missions-entrainements-motivations">Lire l'article complet sur defense.gouv.fr</a></p>
-      ]]></description>
-
-      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Portrait%20de%20grenadier%20voltigeur.jpg?itok=fuZGF-fw" type="image/jpeg" />
     </item>
 
 
