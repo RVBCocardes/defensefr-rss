@@ -16,7 +16,7 @@
 
     <ttl>60</ttl>
 
-    <lastBuildDate>Mon, 14 Sep 2026 13:32:10 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 14:31:42 +0000</lastBuildDate>
 
     
     <item>
@@ -26,12 +26,27 @@
       <pubDate>Mon, 14 Sep 2026 13:07:10 +0000</pubDate>
 
       <description><![CDATA[
-<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/A400M.jpg?itok=eAAI-kl7" alt="" style="max-width:100%;height:auto;" /></p>
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/A400M%20base%20Arctique.jpg?itok=S6DxQQvm" alt="" style="max-width:100%;height:auto;" /></p>
 <p>Symbole des capacités de projection et d’autonomie des forces aériennes françaises, l’A400M Atlas a su conquérir le cœur du grand public comme celui des experts. Héros discret des conflits modernes comme des catastrophes naturelles, il s’est imposé au fil des ans comme un outil indispensable.</p>
 <p><a href="https://www.defense.gouv.fr/actualites/jdef-a400m-combattre-sauver">Lire l'article complet sur defense.gouv.fr</a></p>
       ]]></description>
 
-      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/A400M.jpg?itok=eAAI-kl7" type="image/jpeg" />
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/A400M%20base%20Arctique.jpg?itok=S6DxQQvm" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>Mission Corymbe 26 : assurer la sécurité dans le Golfe de Guinée</title>
+      <link>https://www.defense.gouv.fr/actualites/mission-corymbe-26-assurer-securite-golfe-guinee</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/mission-corymbe-26-assurer-securite-golfe-guinee</guid>
+      <pubDate>Mon, 14 Sep 2026 07:00:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2025_MBST_179_C_051_015_BD.jpg?itok=jUEicOax" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Piraterie, pêche et trafics illégaux… Situé à l’Ouest du continent Africain, le Golfe de Guinée constitue un espace maritime essentiel à sécuriser. C’est tout l’objectif de la mission Corymbe 26. Explications avec le capitaine de vaisseau Gautier.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/mission-corymbe-26-assurer-securite-golfe-guinee">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2025_MBST_179_C_051_015_BD.jpg?itok=jUEicOax" type="image/jpeg" />
     </item>
 
     <item>
@@ -197,21 +212,6 @@
       ]]></description>
 
       <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Ecole%20des%20mousses%20-%2014072025%20-%201.jpg?itok=FUiMhNRw" type="image/jpeg" />
-    </item>
-
-    <item>
-      <title>Pégase 26, déploiement stratégique de l’armée de l’Air et de l’Espace</title>
-      <link>https://www.defense.gouv.fr/actualites/pegase-26-deploiement-strategique-larmee-lair-lespace</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/pegase-26-deploiement-strategique-larmee-lair-lespace</guid>
-      <pubDate>Thu, 27 Aug 2026 13:55:29 +0000</pubDate>
-
-      <description><![CDATA[
-<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2022_A330_033_R_004_048.jpg?itok=dtZM-fzq" alt="" style="max-width:100%;height:auto;" /></p>
-<p>Assurer une présence militaire décisive et, ce, sur un arc stratégique étendu –de l’Arctique au Proche-Moyen-Orient, en passant par l’Indopacifique : c’est bien ce qu’incarne la mission Pégase 2026. Par cette septième édition, l’armée de l’Air et de l’Espace illustre, une fois de plus, son aptitude à se projeter dans des environnements variés et exigeants.</p>
-<p><a href="https://www.defense.gouv.fr/actualites/pegase-26-deploiement-strategique-larmee-lair-lespace">Lire l'article complet sur defense.gouv.fr</a></p>
-      ]]></description>
-
-      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2022_A330_033_R_004_048.jpg?itok=dtZM-fzq" type="image/jpeg" />
     </item>
 
 
