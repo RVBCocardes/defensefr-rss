@@ -16,24 +16,9 @@
 
     <ttl>60</ttl>
 
-    <lastBuildDate>Mon, 21 Sep 2026 12:31:20 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 13:28:02 +0000</lastBuildDate>
 
     
-    <item>
-      <title>[Defcast] La création du plus geek des régiments, celui de la cyberdéfense</title>
-      <link>https://www.defense.gouv.fr/actualites/defcast-creation-du-plus-geek-regiments-celui-cyberdefense</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/defcast-creation-du-plus-geek-regiments-celui-cyberdefense</guid>
-      <pubDate>Mon, 21 Sep 2026 11:59:29 +0000</pubDate>
-
-      <description><![CDATA[
-<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/breve_DEFCAST-septembre-26.jpg?itok=N-PILKuk" alt="" style="max-width:100%;height:auto;" /></p>
-<p>C’est un bâtisseur que nous recevons ce mois-ci. Premier chef de corps historique du régiment de cyberdéfense, le plus jeune régiment de l'armée de Terre, le colonel Jean-François Caverne a rendu son commandement cet été. Dans cet entretien, il revient sur les défis liés à la création de cette nouvelle unité, évoque son goût de la transmission et nous explique pourquoi il a choisi de rester au sein des forces bien au-delà de son premier contrat de cinq ans.</p>
-<p><a href="https://www.defense.gouv.fr/actualites/defcast-creation-du-plus-geek-regiments-celui-cyberdefense">Lire l'article complet sur defense.gouv.fr</a></p>
-      ]]></description>
-
-      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/breve_DEFCAST-septembre-26.jpg?itok=N-PILKuk" type="image/jpeg" />
-    </item>
-
     <item>
       <title>Assises du monde combattant : faire de la mémoire un principe d’action</title>
       <link>https://www.defense.gouv.fr/actualites/assises-du-monde-combattant-faire-memoire-principe-daction</link>
@@ -212,6 +197,21 @@
       ]]></description>
 
       <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/PegaseMidarm.JPG?itok=mVTk-Kyz" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>A venir : le JDEF "A400M, combattre et sauver"</title>
+      <link>https://www.defense.gouv.fr/actualites/venir-jdef-a400m-combattre-sauver</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/venir-jdef-a400m-combattre-sauver</guid>
+      <pubDate>Wed, 09 Sep 2026 06:46:44 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Capture%20d%E2%80%99e%CC%81cran%202026-09-09%20a%CC%80%2008.31.38.png?itok=L48u-EbV" alt="" style="max-width:100%;height:auto;" /></p>
+<p>L’A400M Atlas s’est imposé au fil des ans comme un équipement stratégique. Celui qui porte le nom prédestiné d’un titan est le plus gros avion de transport militaire tactique que la France ait jamais eu. Ses quatre moteurs, son avionique évolutive et sa connectivité sont autant d’atouts qui lui permettent d’assurer des missions complexes. Découvrez comment cet aéronef continue de révolutionner le transport aérien militaire.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/venir-jdef-a400m-combattre-sauver">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Capture%20d%E2%80%99e%CC%81cran%202026-09-09%20a%CC%80%2008.31.38.png?itok=L48u-EbV" type="image/jpeg" />
     </item>
 
 
