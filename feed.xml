@@ -16,9 +16,24 @@
 
     <ttl>60</ttl>
 
-    <lastBuildDate>Wed, 07 Oct 2026 07:16:09 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 14:35:36 +0000</lastBuildDate>
 
     
+    <item>
+      <title>A venir : le JDEF « Des drones au contact »</title>
+      <link>https://www.defense.gouv.fr/actualites/venir-jdef-drones-au-contact</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/venir-jdef-drones-au-contact</guid>
+      <pubDate>Wed, 07 Oct 2026 09:22:51 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Drones%20au%20contact%20%28Teaser%20JDEF%29.jpg?itok=PzN8xi3k" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Sur les champs de bataille contemporains, les drones transforment profondément la manière de combattre. Au cœur de cette transformation, un engin symbolise à lui seul cette nouvelle manière d’agir : le drone FPV*, petit drone au pilotage immersif, rapide et peu coûteux. Les drones incarnent l’adaptation rapide des armées face aux évolutions technologiques et tactiques.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/venir-jdef-drones-au-contact">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Drones%20au%20contact%20%28Teaser%20JDEF%29.jpg?itok=PzN8xi3k" type="image/jpeg" />
+    </item>
+
     <item>
       <title>Missile M51.3 : un tir d’acceptation réussi depuis le SNLE Le Vigilant</title>
       <link>https://www.defense.gouv.fr/actualites/missile-m513-tir-dacceptation-reussi-snle-vigilant</link>
@@ -197,21 +212,6 @@
       ]]></description>
 
       <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Alice%20Rufo%20-%20Ukraine%20-%2014092026.jpg?itok=K0G_uHDm" type="image/jpeg" />
-    </item>
-
-    <item>
-      <title>[JDEF] A400M, combattre et sauver</title>
-      <link>https://www.defense.gouv.fr/actualites/jdef-a400m-combattre-sauver</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/jdef-a400m-combattre-sauver</guid>
-      <pubDate>Mon, 14 Sep 2026 13:07:10 +0000</pubDate>
-
-      <description><![CDATA[
-<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/A400M%20base%20Arctique.jpg?itok=S6DxQQvm" alt="" style="max-width:100%;height:auto;" /></p>
-<p>Symbole des capacités de projection et d’autonomie des forces aériennes françaises, l’A400M Atlas a su conquérir le cœur du grand public comme celui des experts. Héros discret des conflits modernes comme des catastrophes naturelles, il s’est imposé au fil des ans comme un outil indispensable.</p>
-<p><a href="https://www.defense.gouv.fr/actualites/jdef-a400m-combattre-sauver">Lire l'article complet sur defense.gouv.fr</a></p>
-      ]]></description>
-
-      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/A400M%20base%20Arctique.jpg?itok=S6DxQQvm" type="image/jpeg" />
     </item>
 
 
