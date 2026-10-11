@@ -16,9 +16,24 @@
 
     <ttl>60</ttl>
 
-    <lastBuildDate>Sun, 11 Oct 2026 15:43:34 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 20:19:21 +0000</lastBuildDate>
 
     
+    <item>
+      <title>[JDEF] Des drones au contact</title>
+      <link>https://www.defense.gouv.fr/actualites/jdef-drones-au-contact</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/jdef-drones-au-contact</guid>
+      <pubDate>Sun, 11 Oct 2026 18:15:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/breve-JDEF-octobre-2026.jpg?itok=GVcc4ltw" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Loin du cliché du jeu vidéo, les drones FPV (pour first person view), sont de véritables engins de guerre qui permettent d’observer et d’agir sur une cible tout en limitant l’exposition des soldats. Avec leur mode de pilotage immersif retransmis dans un casque de réalité augmentée, ils sont devenus un élément majeur dans les zones de conflit actuelles et transforment profondément la manière de combattre.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/jdef-drones-au-contact">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/breve-JDEF-octobre-2026.jpg?itok=GVcc4ltw" type="image/jpeg" />
+    </item>
+
     <item>
       <title>FORTIUS, le sport pour se reconstruire</title>
       <link>https://www.defense.gouv.fr/actualites/fortius-sport-se-reconstruire</link>
@@ -197,21 +212,6 @@
       ]]></description>
 
       <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/_C0A7739.jpg?itok=GO5nka1Z" type="image/jpeg" />
-    </item>
-
-    <item>
-      <title>La première promotion du service national baptisée Henri Fertet</title>
-      <link>https://www.defense.gouv.fr/actualites/premiere-promotion-du-service-national-baptisee-henri-fertet</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/premiere-promotion-du-service-national-baptisee-henri-fertet</guid>
-      <pubDate>Tue, 15 Sep 2026 14:17:41 +0000</pubDate>
-
-      <description><![CDATA[
-<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2026_A115_120_D_001_069.jpg?itok=mLuOJYAd" alt="" style="max-width:100%;height:auto;" /></p>
-<p>Ce 15 septembre sur la base aérienne 115 d’Orange, Emmanuel Macron, président de la République, a rendu public le nom de la première promotion des appelés du service national : elle s’appellera Henri Fertet, Compagnon de la Libération.</p>
-<p><a href="https://www.defense.gouv.fr/actualites/premiere-promotion-du-service-national-baptisee-henri-fertet">Lire l'article complet sur defense.gouv.fr</a></p>
-      ]]></description>
-
-      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2026_A115_120_D_001_069.jpg?itok=mLuOJYAd" type="image/jpeg" />
     </item>
 
 
