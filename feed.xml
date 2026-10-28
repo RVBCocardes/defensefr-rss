@@ -16,9 +16,24 @@
 
     <ttl>60</ttl>
 
-    <lastBuildDate>Wed, 28 Oct 2026 02:17:42 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 09:42:27 +0000</lastBuildDate>
 
     
+    <item>
+      <title>20 ans du Journal de la Défense, 20 ans de reportages auprès des militaires</title>
+      <link>https://www.defense.gouv.fr/actualites/20-ans-du-journal-defense-20-ans-reportages-aupres-militaires</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/20-ans-du-journal-defense-20-ans-reportages-aupres-militaires</guid>
+      <pubDate>Wed, 28 Oct 2026 07:30:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/20-anniv-YT-breve.jpg?itok=k2Nieblt" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Tous les mois depuis vingt ans sur la chaine LCP-Assemblée nationale, le Journal de la Défense (JDEF) emmène les téléspectateurs au plus près des femmes et des hommes de la Défense. Deux décennies de reportage, d’immersion et décryptage pour mieux comprendre les missions de nos armées.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/20-ans-du-journal-defense-20-ans-reportages-aupres-militaires">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/20-anniv-YT-breve.jpg?itok=k2Nieblt" type="image/jpeg" />
+    </item>
+
     <item>
       <title>Défense européenne : le E5 veut bâtir une Europe plus forte dans une Otan plus forte</title>
       <link>https://www.defense.gouv.fr/actualites/defense-europeenne-e5-veut-batir-europe-plus-forte-otan-plus-forte</link>
@@ -197,21 +212,6 @@
       ]]></description>
 
       <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2026_10_NP_DPOL_SiO_GRPTD_Smertrios_COM%281%29.jpg?itok=iwmEsxfb" type="image/jpeg" />
-    </item>
-
-    <item>
-      <title>HypAIRion: l'IA au service du combat aérien français</title>
-      <link>https://www.defense.gouv.fr/actualites/hypairion-lia-au-service-du-combat-aerien-francais</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/hypairion-lia-au-service-du-combat-aerien-francais</guid>
-      <pubDate>Thu, 01 Oct 2026 13:57:38 +0000</pubDate>
-
-      <description><![CDATA[
-<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2024_CHAMMAL_AJOD_252_E_004_001.jpg?itok=QwDWAFZ8" alt="" style="max-width:100%;height:auto;" /></p>
-<p>Lancé en juillet 2026, le projet HypAIRion entend englober toutes les initiatives d'intelligence artificielle de l'armée de l'Air et de l'Espace pour moderniser l'aviation de chasse. Porté avec la DGA et l'AMIAD, ce programme à vocation expérimentale vise un potentiel de transformation majeur : demain, des drones de combat collaboratifs voleront aux côtés des Rafale.</p>
-<p><a href="https://www.defense.gouv.fr/actualites/hypairion-lia-au-service-du-combat-aerien-francais">Lire l'article complet sur defense.gouv.fr</a></p>
-      ]]></description>
-
-      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2024_CHAMMAL_AJOD_252_E_004_001.jpg?itok=QwDWAFZ8" type="image/jpeg" />
     </item>
 
 
