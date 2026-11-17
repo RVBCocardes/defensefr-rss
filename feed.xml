@@ -16,24 +16,9 @@
 
     <ttl>60</ttl>
 
-    <lastBuildDate>Tue, 17 Nov 2026 04:30:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 14:27:38 +0000</lastBuildDate>
 
     
-    <item>
-      <title>Au salon des maires et des collectivités locales, une présence essentielle du ministère des Armées et des Anciens Combattants pour les territoires</title>
-      <link>https://www.defense.gouv.fr/actualites/au-salon-maires-collectivites-locales-presence-essentielle-du-ministere-armees-anciens-combattants</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/au-salon-maires-collectivites-locales-presence-essentielle-du-ministere-armees-anciens-combattants</guid>
-      <pubDate>Mon, 16 Nov 2026 16:41:34 +0000</pubDate>
-
-      <description><![CDATA[
-<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2025_SGA045_002_R_059_BD.jpg?itok=yVk_wzIc" alt="" style="max-width:100%;height:auto;" /></p>
-<p>Le ministère des Armées et des Anciens Combattants sera présent au salon des maires et des collectivités locales du 24 au 26 novembre 2026, à Paris Expo, Porte de Versailles. L’occasion pour le ministère de renforcer son ancrage territorial et de dialoguer avec les collectivités.</p>
-<p><a href="https://www.defense.gouv.fr/actualites/au-salon-maires-collectivites-locales-presence-essentielle-du-ministere-armees-anciens-combattants">Lire l'article complet sur defense.gouv.fr</a></p>
-      ]]></description>
-
-      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2025_SGA045_002_R_059_BD.jpg?itok=yVk_wzIc" type="image/jpeg" />
-    </item>
-
     <item>
       <title>[Esprit défense n°21] Les soignants militaires sur tous les fronts</title>
       <link>https://www.defense.gouv.fr/actualites/esprit-defense-ndeg21-soignants-militaires-tous-fronts</link>
@@ -47,6 +32,21 @@
       ]]></description>
 
       <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/ED%2321-BREVE.jpg?itok=zCEtLTAa" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>Au salon des maires et des collectivités locales, une présence essentielle du ministère des Armées et des Anciens Combattants pour les territoires</title>
+      <link>https://www.defense.gouv.fr/actualites/au-salon-maires-collectivites-locales-presence-essentielle-du-ministere-armees-anciens-combattants</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/au-salon-maires-collectivites-locales-presence-essentielle-du-ministere-armees-anciens-combattants</guid>
+      <pubDate>Mon, 16 Nov 2026 07:00:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2025_SGA045_002_R_059_BD.jpg?itok=yVk_wzIc" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Le ministère des Armées et des Anciens Combattants sera présent au salon des maires et des collectivités locales du 24 au 26 novembre 2026, à Paris Expo, Porte de Versailles. L’occasion pour le ministère de renforcer son ancrage territorial et de dialoguer avec les collectivités.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/au-salon-maires-collectivites-locales-presence-essentielle-du-ministere-armees-anciens-combattants">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/2025_SGA045_002_R_059_BD.jpg?itok=yVk_wzIc" type="image/jpeg" />
     </item>
 
     <item>
