@@ -16,9 +16,24 @@
 
     <ttl>60</ttl>
 
-    <lastBuildDate>Mon, 23 Nov 2026 02:47:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 12:49:46 +0000</lastBuildDate>
 
     
+    <item>
+      <title>[Journal de la Défense] Reportage sur les démineurs militaires</title>
+      <link>https://www.defense.gouv.fr/actualites/journal-defense-reportage-demineurs-militaires</link>
+      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/journal-defense-reportage-demineurs-militaires</guid>
+      <pubDate>Mon, 23 Nov 2026 07:30:00 +0000</pubDate>
+
+      <description><![CDATA[
+<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/breve-JDEF---nov-2026.jpg?itok=fjbZkJVV" alt="" style="max-width:100%;height:auto;" /></p>
+<p>Aujourd’hui encore, les mines représentent un potentiel de destruction important malgré un coût de fabrication pourtant dérisoire. La lutte anti-mines constitue donc une compétence indispensable pour les armées. Ce mois-ci le Journal de la Défense consacre un reportage aux démineurs militaires. Formations, missions opérationnelles et innovations : découvrez en vidéo ce métier essentiel et exigeant.</p>
+<p><a href="https://www.defense.gouv.fr/actualites/journal-defense-reportage-demineurs-militaires">Lire l'article complet sur defense.gouv.fr</a></p>
+      ]]></description>
+
+      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/breve-JDEF---nov-2026.jpg?itok=fjbZkJVV" type="image/jpeg" />
+    </item>
+
     <item>
       <title>Exercice Taranis 26 : l’armée de l’Air et de l’Espace se prépare au combat de haute intensité</title>
       <link>https://www.defense.gouv.fr/actualites/exercice-taranis-26-larmee-lair-lespace-se-prepare-au-combat-haute-intensite</link>
@@ -197,21 +212,6 @@
       ]]></description>
 
       <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/La%20flamme%20sous%20l%27Arc%20de%20Triomphe_0.jpg?itok=AaLcoU9g" type="image/jpeg" />
-    </item>
-
-    <item>
-      <title>Pacte drones, commandes, innovations : bilan très positif pour Euronaval 2026</title>
-      <link>https://www.defense.gouv.fr/actualites/pacte-drones-commandes-innovations-bilan-tres-positif-euronaval-2026</link>
-      <guid isPermaLink="true">https://www.defense.gouv.fr/actualites/pacte-drones-commandes-innovations-bilan-tres-positif-euronaval-2026</guid>
-      <pubDate>Mon, 09 Nov 2026 08:00:00 +0000</pubDate>
-
-      <description><![CDATA[
-<p><img src="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Salon%20Euronaval%202026.jpg?itok=tx8ypBat" alt="" style="max-width:100%;height:auto;" /></p>
-<p>Avec 713 exposants, 28 000 visites professionnelles et 204 délégations officielles issues de 71 pays, le salon Euronaval 2026 a battu des records en matière de fréquentation. Cette 30e édition a notamment été marquée par la signature du pacte drones navals de défense par Catherine Vautrin, ministre des Armées et des Anciens combattants, ainsi que par plusieurs annonces majeures pour les capacités de la Marine nationale.</p>
-<p><a href="https://www.defense.gouv.fr/actualites/pacte-drones-commandes-innovations-bilan-tres-positif-euronaval-2026">Lire l'article complet sur defense.gouv.fr</a></p>
-      ]]></description>
-
-      <enclosure url="http://www.defense.gouv.fr/sites/default/files/styles/16_9_md/public/ministere-armees/Salon%20Euronaval%202026.jpg?itok=tx8ypBat" type="image/jpeg" />
     </item>
 
 
